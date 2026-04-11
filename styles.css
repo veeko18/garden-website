@@ -1,8 +1,8 @@
 :root {
     /*Main Colors*/
-    --color-bg: #EDEEE4;
+    --color-bg: hsl(66, 23%, 91%);
     --color-surface: #FFFFFF;
-    --color-primary: #7D8E26;
+    --color-primary: #92A134;
     --color-primary-strong: #6F7F1F;
     --color-surface-tint: #DDE3BF;
     --color-accent-sale: #F07134;
@@ -44,6 +44,7 @@
     --font-weight-700: 700;
     --line-height-120: 1.2;
     --font-style: normal;
+    --font-style-bold: bold;
     --font-optical-sizing: auto;
     /*to make the text more readable*/
     --font-feature-settings: "liga" off, "clig" off;
@@ -189,23 +190,42 @@ body {
     height: auto;
 }
 
-.hero-content {
+.hero-btn {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-sm);/*1rem*/
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    text-decoration: none;
+    font-size: calc(var(--space-lg) / 2);
+    font-weight: var(--font-weight-600);
+    padding: 16px 56px;
+    gap: 10px;
+    width: 218px;
+    height: 58px;
+}
+
+.discounts-content {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    margin-top: 0;
+    
     position: absolute;
     top: 55%;
     left: 2%;
     margin-top: 0;
 }
 
-.hero-btn {
-    position: absolute;
-    border: 0;
-    border-radius: var(--radius-sm);
-    background-color: var(--color-primary);
+.discounts-content > h1 {
+    font-family: var(--font-main);
+    font-size: var(--font-size-96);
+    font-weight: var(--font-weight-700);
+    font-style: var(--font-style-bold);
+    line-height: calc(var(--line-height-120) - 10);
     color: var(--color-surface);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: var(--font-weight-600);
-    line-height: 1;
-    padding: 7px 55px;
-    margin-top: 0;
+    letter-spacing: 0%;
+    width: 1360px;
+    height: 212px;
 }
